@@ -8,3 +8,19 @@ This is my final project for Code Louisville's Data Analysis track, ending summe
 ### Data Download
 
 Data was downloaded in csv format from https://www.kaggle.com/competitions/h-and-m-personalized-fashion-recommendations/data, then extracted to the 'Data' folder in this repository. In order to access this data, it is necessary to have an active Kaggle account with which you must accept the rules of the competition as set forth by H&M. Note: the competition is no longer active and the rules state that the data is acceptable for use in educational purposes, which is my intent. 
+
+
+### Setting Up The Virtual Environment
+
+For Windows users: 
+  - using GitBash, make sure you are in the correct folder, then enter the following commands:
+    -  py -m venv venv
+    -  source venv/Scripts/activate
+    -  pip install -r requirements.txt
+   
+For Mac OS users:
+  - using GitBash, make sure you are in the correct folder, then enter the following commands:
+    -  py -m venv venv
+    -  source venv/bin/activate
+    -  pip install -r requirements.txt
+    
