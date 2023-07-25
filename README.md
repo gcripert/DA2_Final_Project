@@ -1,8 +1,8 @@
-# DA2_Final_Project
+# Data Analysis 2 Final Project: Customer Trends in Fashion Retail 
 
 ### Project Overview
 
-This is my final project for Code Louisville's Data Analysis track, ending summer 2023. I will be delving into some data sets from a competition hosted by retail fashion brand H&M last year. All relevant data can be found at a. My objective is to examine trends in customer purchasing history across age groups. A visualization of these results can be viewed on my Tableau Pubilc [profile](https://public.tableau.com/views/FashionData/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link).
+This is my final project for Code Louisville's Data Analysis track, ending summer 2023. I will be delving into some data sets from the clothing retail company H&M. The sets contain two years of data including customer transaction history, customer demographics, and articles purchased. My objective is to clean and combine the data into a more easily readable format, then identify and interpret trends in customer purchases over time. As the second largest international clothing retailer, I am particularly interested in examining how well H&M's target age demographic aligns with actual purchases. Furthermore, I would like to determine the average spending for each given age group.  A visualization of these results can be viewed on my Tableau Pubilc [profile](https://public.tableau.com/views/FashionData/Dashboard1?:language=en-US&publish=yes&:display_count=n&:origin=viz_share_link).
 
 
 ### Data Download
