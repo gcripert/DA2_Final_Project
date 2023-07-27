@@ -226,8 +226,8 @@ sql = conn.cursor()
 
 print(f'creating indexes on age and price columns on customers and transactions tables')
 
-sql.execute('CREATE INDEX idx_age ON Customers (age)')
-sql.execute('CREATE INDEX idx_price ON Transactions (price)')
+sql.execute('CREATE INDEX IF NOT EXISTS idx_age ON Customers (age)')
+sql.execute('CREATE INDEX IF NOT EXISTS idx_price ON Transactions (price)')
 
 # Removing records with empty ages and prices
 
