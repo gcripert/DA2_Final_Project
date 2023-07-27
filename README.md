@@ -17,18 +17,32 @@ Fork and clone this repository to your local machine and initialize a virtual en
 Python 3.11 is needed to run this program
 
 For Windows users: 
-  - using GitBash, make sure you are in the correct folder, then enter the following commands:
-    -  py -m venv venv
-    -  source venv/Scripts/activate
-    -  pip install -r requirements.txt
+  - if using GitBash, make sure you are in the correct folder, then enter the following commands:
+    ```
+      py -m venv venv
+      source venv/Scripts/activate
+      pip install -r requirements.txt
+    ```
+  - if using Command Prompt:
+    ```
+      py -m venv venv
+      venv\Scripts\activate
+      pip install -r requirements.txt
+    ```
    
 For Mac OS users:
   - using GitBash, make sure you are in the correct folder, then enter the following commands:
-    -  py -m venv venv
-    -  source venv/bin/activate
-    -  pip install -r requirements.txt
+    ```
+      py -m venv venv
+      source venv/bin/activate
+      pip install -r requirements.txt
+    ```
    
-Run Fashion_Analysis.py
+Run Fashion_Analysis.py:
+```
+py Fashion_Analysis.py
+
+```
    
 
 ### Project Conclusions
