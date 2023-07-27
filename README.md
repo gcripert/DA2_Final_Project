@@ -44,7 +44,7 @@ Run Fashion_Analysis.py:
 ```
 py Fashion_Analysis.py
 ```
-   
+**NOTE:** May take 20+ minutes to read and import data and execute query on large data set  
 
 ### Project Conclusions
 
