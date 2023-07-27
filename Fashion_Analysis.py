@@ -10,6 +10,8 @@ import pandas as pd
 
 def create_table_from_csv(sql, csv_file_path, table_name):
 
+    print(f"creating table {table_name} from {csv_file_path}")
+
     # Using 'reader' to read the headers; these will be the column names for the table
 
     with open(csv_file_path, 'r', newline='', encoding='utf-8') as csvfile:
@@ -60,6 +62,8 @@ def create_table_from_csv(sql, csv_file_path, table_name):
 
     # Creating the table
 
+    print(f'executing sql query {create_table_sql}')
+
     sql.execute(create_table_sql)
 
 
@@ -67,6 +71,7 @@ def create_table_from_csv(sql, csv_file_path, table_name):
 # Function for determining if the table is empty
 
 def table_is_empty(sql, table_name):
+    print(f'checking if table {table_name} is empty')
     sql.execute(f'SELECT COUNT(*) FROM {table_name}')
     count = sql.fetchone()[0]
     return count == 0
@@ -77,6 +82,7 @@ def table_is_empty(sql, table_name):
 
 
 def import_data_from_csv(csv_file_path, db_file_path, table_name):
+    print(f'importing table {table_name} from {csv_file_path} into {db_file_path}')
 
     # Connecting to the SQLite database. uri=True will create the database if it does not already exist
 
@@ -106,8 +112,10 @@ def import_data_from_csv(csv_file_path, db_file_path, table_name):
         for row in csvreader:
 
             # Creating sql INSERT for data row
+            query = f'INSERT INTO {table_name} VALUES ({", ".join("?" * len(row))})', row
+            print(f'executing sql query {query}')
 
-            sql.execute(f'INSERT INTO {table_name} VALUES ({", ".join("?" * len(row))})', row)
+            sql.execute(query)
 
     # Committing the changes and closing the connection
 
@@ -153,6 +161,8 @@ def query_and_print(database_file, query):
         cursor = connection.cursor()
 
         # Executing the query
+
+        print(f'executing and printing sql query {query}')
 
         cursor.execute(query)
 
@@ -214,10 +224,14 @@ sql = conn.cursor()
 
 # Creating indexes for age and price to speed up sqlite queries
 
+print(f'creating indexes on age and price columns on customers and transactions tables')
+
 sql.execute('CREATE INDEX idx_age ON Customers (age)')
 sql.execute('CREATE INDEX idx_price ON Transactions (price)')
 
 # Removing records with empty ages and prices
+
+print('removing records with empty age or price')
 
 sql.execute("DELETE FROM customers WHERE age = ''")
 sql.execute("DELETE FROM transactions WHERE price = ''")
@@ -247,12 +261,18 @@ GROUP BY age_group;
 
 # Executing query and storing the results in a dataframe
 
+print(f'executing sql query {query}')
+
 sql.execute(query)
 results = sql.fetchall()
 df = pd.DataFrame(results, columns=['age_group', 'num_customers', 'population_share_percentage', 'transaction_total', 'transaction_average'])
 
 # Saving results data to csv for use in a Tableau dashboard visualization
 
+print('saving results to age_data.csv')
+
 df.to_csv('age_data.csv')
+
+print('completed')
 
 
