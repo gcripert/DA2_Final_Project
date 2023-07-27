@@ -41,7 +41,6 @@ For Mac OS users:
 Run Fashion_Analysis.py:
 ```
 py Fashion_Analysis.py
-
 ```
    
 
