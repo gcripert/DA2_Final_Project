@@ -12,13 +12,13 @@ def create_table_from_csv(sql, csv_file_path, table_name):
 
     # Using 'reader' to read the headers; these will be the column names for the table
 
-    with open(csv_file_path, 'r', newline='') as csvfile:
+    with open(csv_file_path, 'r', newline='', encoding='utf-8') as csvfile:
         csvreader = csv.reader(csvfile)
         headers = next(csvreader)
 
     # Determining the data types for each column based on the first row of data in the csv with no empty values
 
-    with open(csv_file_path, 'r', newline='') as csvfile:
+    with open(csv_file_path, 'r', newline='', encoding='utf-8') as csvfile:
         csvreader = csv.DictReader(csvfile)
         for row in csvreader:
             if all(row.values()):
@@ -96,7 +96,7 @@ def import_data_from_csv(csv_file_path, db_file_path, table_name):
 
     # Reading data from the csv file and inserting it into the SQLite table
 
-    with open(csv_file_path, 'r', newline='') as csvfile:
+    with open(csv_file_path, 'r', newline='', encoding='utf-8') as csvfile:
         csvreader = csv.reader(csvfile)
 
         # Skipping the header row
