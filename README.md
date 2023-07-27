@@ -9,7 +9,9 @@ This is my final project for Code Louisville's Data Analysis track, ending summe
 
 Data was downloaded in csv format from https://www.kaggle.com/competitions/h-and-m-personalized-fashion-recommendations/data, then extracted to the folder titled 'Data' in this repository. In order to access this data, it is necessary to have an active Kaggle account from which you must accept the rules of the competition as set forth by H&M. **NOTE:** the competition is no longer active and the rules state that the data is acceptable for use in educational purposes, which is my intent. 
 
-Fork and clone this repository to your local machine and initialize a virtual environment by following the steps below. **NOTE** the file titled 'transactions_train.csv' is roughly 3.5 GB and as such may take longer to load.
+Clone this repository to your local machine and initialize a virtual environment by following the steps below. **NOTE:** the file titled 'transactions_train.csv' is roughly 3.5 GB and as such may take longer to load.
+
+**ALTERNATIVE:** [data.7z](https://drive.google.com/file/d/1lE6M_XQBm4dNXspWYGZKfYPZgLolbLJj/view?usp=drive_link) (for ease of access)
 
 
 ### Setting Up The Virtual Environment
