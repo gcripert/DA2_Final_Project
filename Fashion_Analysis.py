@@ -115,7 +115,7 @@ def import_data_from_csv(csv_file_path, db_file_path, table_name):
             query = f'INSERT INTO {table_name} VALUES ({", ".join("?" * len(row))})', row
             print(f'executing sql query {query}')
 
-            sql.execute(query)
+            sql.execute(f'INSERT INTO {table_name} VALUES ({", ".join("?" * len(row))})', row)
 
     # Committing the changes and closing the connection
 
